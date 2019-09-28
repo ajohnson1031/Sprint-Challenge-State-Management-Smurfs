@@ -14,7 +14,7 @@ export const getSmurfs = (e, q) => dispatch => {
   let smurfQuery = q === "" ? "smurfs" : q;
 
   axios
-    .get(`http://localhost:3333/${smurfQuery}`)
+    .get(`${process.env.REACT_APP_API_URL}/${smurfQuery}`)
     .then(res => dispatch({ type: GET_SMURFS_SUCCESS, payload: res.data }))
     .catch(err => dispatch({ type: GET_SMURFS_FAIL, payload: err }));
 };
@@ -28,11 +28,11 @@ export const addSmurf = (e, newSmurf) => dispatch => {
     dispatch({ type: ADD_SMURF_FAIL, payload: error });
   } else {
     axios
-      .post(`http://localhost:3333/smurfs`, newSmurf)
+      .post(`${process.env.REACT_APP_API_URL}/smurfs`, newSmurf)
       .then(res => {
         dispatch({ type: ADD_SMURF });
         axios
-          .get(`http://localhost:3333/smurfs`)
+          .get(`${process.env.REACT_APP_API_URL}/smurfs`)
           .then(res =>
             dispatch({ type: GET_SMURFS_SUCCESS, payload: res.data })
           )
