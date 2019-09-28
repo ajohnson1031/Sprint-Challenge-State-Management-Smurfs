@@ -1,10 +1,10 @@
 const express = require('express');
 const cors = require('cors');
-const port = 3333;
+const port = process.env.PORT || 3333;
 
 const server = express();
-server.use(express.json());
 server.use(cors());
+server.use(express.json());
 
 const sendUserError = (msg, res) => {
   res.status(422);
@@ -20,6 +20,11 @@ let smurfs = [
     id: 0
   }
 ];
+
+server.get('/', (req, res) => {
+  return res.status(200).send('API is alive!');
+});
+
 server.get('/smurfs', (req, res) => {
   res.json(smurfs);
 });
