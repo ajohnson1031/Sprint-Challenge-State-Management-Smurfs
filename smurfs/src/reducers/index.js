@@ -3,7 +3,10 @@ import {
   UPDATE_QUERY,
   GET_SMURFS_START,
   GET_SMURFS_SUCCESS,
-  GET_SMURFS_FAIL
+  GET_SMURFS_FAIL,
+  UPDATE_NEW_SMURF,
+  ADD_SMURF,
+  ADD_SMURF_FAIL
 } from "../actions";
 
 export const reducer = (state = initialState, action) => {
@@ -24,8 +27,27 @@ export const reducer = (state = initialState, action) => {
         ...state,
         isLoading: false,
         smurfs: [],
-        err: "There was a problem loading smurfs. Please try again."
+        err: "There was a problem smurfing smurfs. Please try again."
       };
+    case UPDATE_NEW_SMURF:
+      return {
+        ...state,
+        err: null,
+        newSmurf: {
+          ...state.newSmurf,
+          name: action.payload.name,
+          age: action.payload.age,
+          height: action.payload.height,
+          id: state.smurfs.length
+        }
+      };
+    case ADD_SMURF:
+      return {
+        ...state,
+        newSmurf: { ...state.newSmurf, name: "", age: "", height: "" }
+      };
+    case ADD_SMURF_FAIL:
+      return { ...state, err: action.payload };
     default:
       return state;
   }

@@ -1,28 +1,64 @@
 .App {
   text-align: center;
+  margin-top: 50px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+input {
+  padding: 8px 25px;
+  font-size: 1.3rem;
+  width: 300px;
+  outline: none;
+  border: 1px solid #ccc;
+  border-right: none;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+.add-field {
+  width: 200px;
+}
+
+button {
+  padding: 15px 12px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  background-color: dodgerblue;
+  border: none;
+  margin-left: 12px;
   color: white;
+  outline: none;
+  cursor: pointer;
 }
 
-.App-title {
-  font-size: 1.5em;
+button:hover {
+  background-color: #034d8b;
 }
 
-.App-intro {
-  font-size: large;
+.smurf-list {
+  width: 80%;
+  padding: 50px;
+  margin-top: 30px;
+  border: 2px solid navy;
+  margin: 40px auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 4px;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.ui.card.smurf-card {
+  width: fit-content;
+  padding: 20px;
+  background: dodgerblue;
+  color: white;
+  border: 2px solid navy;
+  margin: 0 0 10px 10px;
+}
+
+.err {
+  padding: 8px 30px;
+  border: 2px solid rgb(180, 31, 31);
+  background-color: #f1e2e2;
+  font-weight: bold;
+  color: rgb(180, 31, 31);
+  width: fit-content;
+  margin: 20px auto;
+  border-radius: ;
 }

@@ -1,15 +1,9 @@
 import React from "react";
 
-const Form = ({ query, getSmurfs, updateQuery }) => {
-  // console.log("aj: Form: query: ", query);
+const Form = ({ query, getSmurfs }) => {
   return (
     <form action="">
-      <input
-        type="text"
-        value={query}
-        onChange={e => updateQuery(e.target.value)}
-      />
-      <button onClick={(e, q) => getSmurfs(e, query)}></button>
+      <button onClick={(e, q) => getSmurfs(e, query)}>GET ALL SMURFS!</button>
     </form>
   );
 };
