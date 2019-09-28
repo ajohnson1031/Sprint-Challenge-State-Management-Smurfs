@@ -1,3 +1,6 @@
 export const initialState = {
-  smurfs: []
+  query: "",
+  isLoading: false,
+  smurfs: [],
+  err: null
 };
