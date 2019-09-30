@@ -6,7 +6,10 @@ import {
   GET_SMURFS_FAIL,
   UPDATE_NEW_SMURF,
   ADD_SMURF,
-  ADD_SMURF_FAIL
+  ADD_SMURF_FAIL,
+  DELETE_SMURF_START,
+  DELETE_SMURF_SUCCESS,
+  DELETE_SMURF_FAIL
 } from "../actions";
 
 export const reducer = (state = initialState, action) => {
@@ -48,6 +51,16 @@ export const reducer = (state = initialState, action) => {
       };
     case ADD_SMURF_FAIL:
       return { ...state, err: action.payload };
+    case DELETE_SMURF_START:
+      return state;
+    case DELETE_SMURF_SUCCESS:
+      return { ...state, smurfs: action.payload };
+    case DELETE_SMURF_FAIL:
+      return {
+        ...state,
+        smurfs: [],
+        err: "There was a problem smurfing smurfs. Please try again."
+      };
     default:
       return state;
   }

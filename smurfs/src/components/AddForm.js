@@ -33,7 +33,10 @@ const AddForm = ({ state, addSmurf, updateNewSmurf }) => {
           updateNewSmurf({ ...state.newSmurf, [e.target.name]: e.target.value })
         }
       />
-      <button onClick={(e, n) => addSmurf(e, state.newSmurf)}>
+      <button
+        className="add-smurf"
+        onClick={(e, n) => addSmurf(e, state.newSmurf)}
+      >
         SMURF A NEW SMURF!
       </button>
     </form>

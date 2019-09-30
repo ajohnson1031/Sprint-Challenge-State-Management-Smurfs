@@ -1,12 +1,12 @@
 import React from "react";
-import { getSmurfs, addSmurf, updateNewSmurf } from "../actions";
+import { getSmurfs, addSmurf, updateNewSmurf, deleteSmurf } from "../actions";
 import "./App.css";
 import { connect } from "react-redux";
 import Form from "./Form";
 import SmurfList from "./SmurfList";
 import AddForm from "./AddForm";
 
-function App({ state, getSmurfs, addSmurf, updateNewSmurf }) {
+function App({ state, getSmurfs, addSmurf, updateNewSmurf, deleteSmurf }) {
   return (
     <div className="App">
       <h1>Smurf-tastic App</h1>
@@ -16,8 +16,14 @@ function App({ state, getSmurfs, addSmurf, updateNewSmurf }) {
         addSmurf={addSmurf}
         updateNewSmurf={updateNewSmurf}
       />
-      {state.err && <div className="err">{state.err}</div>}
-      {state.smurfs.length > 0 && <SmurfList state={state} />}
+      {state.err && (
+        <div className="err">
+          <p>{state.err}</p>
+        </div>
+      )}
+      {state.smurfs.length > 0 && (
+        <SmurfList state={state} deleteSmurf={deleteSmurf} />
+      )}
     </div>
   );
 }
@@ -26,5 +32,5 @@ const mapStateToProps = state => ({ state: state });
 
 export default connect(
   mapStateToProps,
-  { getSmurfs, addSmurf, updateNewSmurf }
+  { getSmurfs, addSmurf, updateNewSmurf, deleteSmurf }
 )(App);

@@ -8,7 +8,7 @@
 
 input {
   padding: 8px 25px;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   width: 300px;
   outline: none;
   border: 1px solid #ccc;
@@ -16,7 +16,7 @@ input {
 }
 
 .add-field {
-  width: 200px;
+  width: 230px;
 }
 
 button {
@@ -25,7 +25,7 @@ button {
   font-weight: bold;
   background-color: dodgerblue;
   border: none;
-  margin-left: 12px;
+  margin: 0;
   color: white;
   outline: none;
   cursor: pointer;
@@ -48,7 +48,7 @@ button:hover {
 
 .ui.card.smurf-card {
   width: fit-content;
-  padding: 20px;
+  padding: 30px 20px 20px;
   background: dodgerblue;
   color: white;
   border: 2px solid navy;
@@ -64,4 +64,39 @@ button:hover {
   width: fit-content;
   margin: 20px auto;
   border-radius: ;
+}
+
+i.close.icon {
+  position: absolute;
+  right: 0px;
+  top: 7px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+i.close.icon:hover {
+  color: #ff5b5b;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin: 0 auto 20px;
+}
+
+h4 {
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 20px 0;
+}
+
+p {
+  font-size: 0.9rem;
+  margin: 9px 0;
+}
+
+.add-smurf {
+  position: relative;
+  top: -3px;
 }
