@@ -25,7 +25,7 @@ button {
   font-weight: bold;
   background-color: dodgerblue;
   border: none;
-  margin-left: 12px;
+  margin: 0;
   color: white;
   outline: none;
   cursor: pointer;
@@ -96,6 +96,7 @@ p {
   margin: 9px 0;
 }
 
-button {
-  margin-left: 0;
+.add-smurf {
+  position: relative;
+  top: -2.5px;
 }

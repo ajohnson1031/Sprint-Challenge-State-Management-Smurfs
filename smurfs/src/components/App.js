@@ -16,7 +16,11 @@ function App({ state, getSmurfs, addSmurf, updateNewSmurf, deleteSmurf }) {
         addSmurf={addSmurf}
         updateNewSmurf={updateNewSmurf}
       />
-      {state.err && <div className="err">{state.err}</div>}
+      {state.err && (
+        <div className="err">
+          <p>{state.err}</p>
+        </div>
+      )}
       {state.smurfs.length > 0 && (
         <SmurfList state={state} deleteSmurf={deleteSmurf} />
       )}
