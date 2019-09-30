@@ -68,8 +68,8 @@ button:hover {
 
 i.close.icon {
   position: absolute;
-  right: 5px;
-  top: 5px;
+  right: 0px;
+  top: 7px;
   cursor: pointer;
   font-size: 0.9rem;
 }
@@ -98,5 +98,5 @@ p {
 
 .add-smurf {
   position: relative;
-  top: -2.5px;
+  top: -3px;
 }
