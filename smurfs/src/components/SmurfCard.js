@@ -1,10 +1,11 @@
 import React from "react";
-import { Card } from "semantic-ui-react";
+import { Card, Icon } from "semantic-ui-react";
 import "semantic-ui-css/semantic.min.css";
 
-const SmurfCard = ({ smurfdetails }) => {
+const SmurfCard = ({ smurfdetails, deleteSmurf }) => {
   return (
     <Card className="smurf-card ">
+      <Icon name="close" onClick={() => deleteSmurf(smurfdetails.id)}></Icon>
       <p>
         <strong>Name:</strong> {smurfdetails.name}
       </p>
