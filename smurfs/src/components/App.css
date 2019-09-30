@@ -83,3 +83,17 @@ h1 {
   text-transform: uppercase;
   margin: 0 auto 20px;
 }
+
+h4 {
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 20px 0;
+}
+
+p {
+  font-size: 0.9rem;
+}
+
+button {
+  margin-left: 0;
+}
