@@ -76,3 +76,10 @@ i.close.icon {
 i.close.icon:hover {
   color: #ff5b5b;
 }
+
+h1 {
+  font-weight: bold;
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin: 0 auto 20px;
+}
